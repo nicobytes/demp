@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #banner {
+        background-image: url("/2.jpg");
+        background-size: cover;
+      }
+    </style>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="w-scren h-screen flex flex-col">
+      <nav class="bg-white p-4 shadow-md">
+        <div class="container mx-auto">
+          <ul class="flex justify-around">
+            <li class="text-gray-700 hover:text-blue-500">
+              <a href="#" class="px-3 py-2 rounded-lg hover:bg-gray-100"
+                >Elemento 1</a
+              >
+            </li>
+            <li class="text-gray-700 hover:text-blue-500">
+              <a href="#" class="px-3 py-2 rounded-lg hover:bg-gray-100"
+                >Elemento 2</a
+              >
+            </li>
+            <li class="text-gray-700 hover:text-blue-500">
+              <a href="#" class="px-3 py-2 rounded-lg hover:bg-gray-100"
+                >Elemento 3</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="flex-grow" id="banner">
+        <section class="h-full w-full flex flex-col justify-center items-center" relative text-white py-20">
+          <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-6">RoboGoal Xtreme</h1>
+            <div class="flex justify-center items-center  w-full">
+              <model-viewer
+              src="https://threejs.org/examples/models/gltf/RobotExpressive/RobotExpressive.glb"
+              alt="Descripción de tu modelo 3D"
+              auto-rotate
+              autoplay
+              camera-controls
+            >
+            </model-viewer>
+
+            </div>
+            <p class="mb-6">🤖🌟 ¡Vive la emoción del fútbol como nunca antes en RoboGoal Xtreme! 🌟🤖</p>
+            <a
+              href="#"
+              class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-full"
+            >
+              Jugar ahora
+            </a>
+            <audio controls autoplay>
+              <source src="/audio.mp3" type="audio/mpeg">
+          </audio>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
